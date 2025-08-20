@@ -1,0 +1,177 @@
+@import url();
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #a58662;
+    overflow-x: hidden;
+}
+section .animate{
+    transition: 1s;
+}
+.letter {
+
+    margin: 15%;
+
+}
+
+button {
+      position: absolute;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+     background: #ded0bb;
+     border: 2px solid #bfa78c;  /* borda inicial */
+    border-radius: 4px;          /* borda levemente arredondada */
+    color: #333;
+}
+
+button:hover {
+  opacity: 0.7;              /* deixa transparente */
+  background: #c2a97f;       /* muda a cor */
+  transform: scale(1.05);    /* dá um leve zoom */
+}
+
+button.hidden {
+      opacity: 0;
+      pointer-events: none; /* evita clique enquanto está "sumido" */
+}
+
+
+h1{
+    position: relative;
+    font-size: 70px;
+    color: #ded0bb;
+}
+p {
+    position: relative;
+    font-size: 35px;
+    color: #ded0bb;
+}
+
+.sec-1 .animate {
+    transform: translateX(-100%);
+}
+.sec-1.show-animate .imagens img {
+    transform: translateX(0);
+}
+
+.sec-1.show-animate .animate {
+    transform: translateX(0);
+}
+
+.sec-1 .imagens img {
+    max-width: 250px;
+    margin: 0 30px;
+    transform: translateX(-100%);
+    transition-delay: calc(.2s * var(--i));
+}
+
+.sec-1.show-animate img.gojo {
+    align-content: end;
+}
+
+.explosion {
+    position: absolute;
+    top: 24%;   /* distância do topo proporcional à altura da tela */
+    left: 42%;  /* distância da esquerda proporcional à largura da tela */
+    transform: translate(-50%, -50%); /* centraliza melhor no ponto */
+}
+
+.gojo{
+    position: absolute;
+    top: 70%;          /* opcional, para colar no topo */
+    right: 0;        /* cola no canto direito */
+    height: 100%; 
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.ratin{
+    position: absolute;
+    top: 160%;          /* opcional, para colar no topo */
+    right: 20%;        /* cola no canto direito */
+    height: 100%; 
+    max-width: 250px;
+    max-height: 250px;                /* começa invisível */
+}
+
+.takehina{
+    position: absolute;
+    top: 270%;          /* opcional, para colar no topo */
+    right: 20%;        /* cola no canto direito */
+    height: 100%; 
+    max-width: 250px;
+    max-height: 250px;                /* começa invisível */
+}
+.sec-2 .animate {
+    transform: translateX(100%);
+}
+
+.sec-2.show-animate .animate {
+    transform: translateX(0);
+}
+
+.sec-2 .images img {
+    max-width: 400px;
+    margin: 0 30px;
+    transform: translateX(-100%);
+    transition-delay: calc(.2s * var(--i));
+}
+
+.sec-3 .animate {
+    transform: scale(.7);
+}
+
+.sec-3.show-animate .animate {
+    transform: scale(1)
+}
+
+.sec-4.images img {
+    max-width: 400px;
+    margin: 0 30px;
+    transform: translateX(100%);
+}
+.sec-2 p {
+    background: #a58662;
+}
+
+.sec-3 p {
+    background: #a58662;
+}
+
+.sec-3 .showRight-animate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #a58662;
+    transition: 1s;
+}
+
+.sec-3.show-animate .showRight-animate {
+    width: 0;
+}
+
+.sec-4 .images img {
+    max-width: 400px;
+    margin: 0 30px;
+    transform: translateX(-100%);
+    transition-delay: calc(.2s * var(--i));
+}
+
+.sec-4.show-animate .images img {
+    transform: translateX(0);
+}
+
