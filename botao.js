@@ -31,7 +31,8 @@ botao.addEventListener("mouseover", () => {
 // Agora o clique abre o YouTube em nova guia
 botao.addEventListener("click", () => {
   if (liberado) {
-    window.open("https://youtu.be/iVeKYr9hKBI", "_blank");
+    window.open("https://youtu.be/bn5m8ZF0B_E", "_blank");
   }
 
 });
+
